@@ -1,0 +1,167 @@
+/* ===== ÉCRAN DE VERROUILLAGE (LOGIN ADMIN) ===== */
+.admin-lock-screen {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centrage horizontal */
+  align-items: center;     /* Centrage vertical */
+  background-color: #f4f7f6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.lock-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 340px; /* Taille optimale pour mobile */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #1a3a5f;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lock-card h2 {
+  color: #1a3a5f;
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.lock-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Style de l'input code secret */
+.lock-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 4px; /* Espace les points du mot de passe */
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.lock-card input:focus {
+  border-color: #1a3a5f;
+  outline: none;
+}
+
+/* ===== BOUTONS ===== */
+.verify-btn, .back-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.verify-btn {
+  background-color: #1a3a5f;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.verify-btn:hover {
+  background-color: #0d2a4a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(26, 58, 95, 0.3);
+}
+
+.back-btn {
+  background-color: #f8f9fa;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.back-btn:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+/* ===== DASHBOARD ADMIN (SUPERVISION) ===== */
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #f4f7f6;
+}
+
+/* Contenu du Dashboard */
+.admin-dashboard .main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre les cartes horizontalement */
+  overflow-y: auto;
+}
+
+.admin-sections {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* Cartes de supervision */
+.admin-dashboard .admin-card {
+  background: white;
+  margin-bottom: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-left: 6px solid #1a3a5f;
+  transition: transform 0.2s;
+}
+
+.admin-dashboard .admin-card:hover {
+  transform: scale(1.02);
+}
+
+.admin-dashboard .admin-card h3 {
+  color: #1a3a5f;
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-dashboard .admin-card p {
+  color: #777;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Boutons d'action dans les cartes */
+.action-btn {
+  background-color: #e8ecef;
+  color: #1a3a5f;
+  border: 1px solid #1a3a5f;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #1a3a5f;
+  color: white;
+}

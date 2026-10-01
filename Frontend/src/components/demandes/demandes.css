@@ -1,0 +1,156 @@
+/* Suppression de 100vw et position: absolute pour rester dans le cadre mobile */
+.liste-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* On réduit le padding de 40px à 15px pour le mobile */
+.app-name { 
+  font-size: 1.2rem; 
+  margin: 0; 
+  font-weight: 600; 
+  margin-left: 0; 
+}
+
+.admin-btn {
+  background-color: white;
+  color: #1a3a5f;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-right: 0;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.admin-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.admin-btn:active {
+  background-color: white;
+  transform: translateY(0);
+}
+
+/* Bandes Header et Footer calées sur 100% du téléphone */
+.top-bar, .footer-bar {
+  background-color: #1a3a5f;
+  color: white;
+  padding: 0 15px; 
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.top-bar { height: 65px; justify-content: space-between; }
+.footer-bar { height: 60px; margin-top: auto; }
+
+.footer-content {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo { height: 28px; }
+
+/* Contenu Principal avec défilement interne */
+.main-content {
+  flex: 1;
+  background-color: #f4f7f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 5px;
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Le conteneur du tableau devient "scrollable" horizontalement si besoin */
+.table-container {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  overflow-x: auto; /* Empêche le glissement de toute l'appli */
+}
+
+.table-header h2 {
+  font-size: 0.95rem;
+  margin: 0 0 10px 0;
+  color: #1a3a5f;
+}
+
+.table-header p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Ajustement du tableau pour les petits écrans */
+.demandes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  font-size: 0.75rem; /* Police plus petite pour mobile */
+}
+
+.demandes-table th, .demandes-table td {
+  padding: 6px 4px; /* Espacement réduit */
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap; /* Empêche le texte de revenir à la ligne brutalement */
+}
+
+.status-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Couleurs des Statuts */
+.en-cours { color: #28a745; }
+.status-dot.en-cours { background-color: #28a745; }
+.traitee { color: #007bff; }
+.status-dot.traitee { background-color: #007bff; }
+.urgente { color: #dc3545; font-weight: bold; }
+.status-dot.urgente { background-color: #dc3545; }
+
+.details-btn {
+  background-color: #1a3a5f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+  background-color: white;
+  color: #1a3a5f;
+  border: 1px solid #1a3a5f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(26, 58, 95, 0.3);
+}
+
+.details-btn:active {
+  background-color: #0d1f30;
+  color: white;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(26, 58, 95, 0.3);
+}

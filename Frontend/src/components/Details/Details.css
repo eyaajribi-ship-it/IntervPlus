@@ -1,0 +1,130 @@
+/* Suppression de position: absolute et 100vw pour rester dans le cadre App.js */
+.details-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Prend toute la hauteur du simulateur App */
+  width: 100%;
+}
+
+/* Header & Footer : Largeur 100% du téléphone, pas de l'écran PC */
+.top-bar, .footer-bar {
+  background-color: #1a3a5f;
+  color: white;
+  padding: 0 15px; /* Réduit pour mobile */
+  width: 100%;
+  box-sizing: border-box; /* Crucial pour éviter le glissement à droite */
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.top-bar { height: 65px; justify-content: space-between; }
+.footer-bar { height: 60px; margin-top: auto; }
+
+/* Correction des marges pour le mobile */
+.app-name { 
+  font-size: 1.2rem; /* Légèrement plus petit pour mobile */
+  margin: 0; 
+  font-weight: 600; 
+}
+
+.admin-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo { height: 28px; }
+
+/* Contenu central avec scroll interne */
+.main-content {
+  flex: 1;
+  background-color: #f4f7f6;
+  overflow-y: auto; /* Permet de scroller les détails si le texte est long */
+  padding: 20px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.details-container {
+  width: 100%; /* Utilise toute la largeur du téléphone */
+}
+
+.details-card {
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-top: 5px solid #1a3a5f;
+  box-sizing: border-box;
+}
+
+/* Grille d'info : On passe en 1 colonne sur mobile pour éviter que ça dépasse */
+.info-grid {
+  display: flex;
+  flex-direction: column; /* Une info par ligne */
+  gap: 15px;
+  margin-top: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+/* Badges de statut */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.en-cours { background: #d4edda; color: #155724; }
+.traitee { background: #cce5ff; color: #004085; }
+.urgente { background: #f8d7da; color: #721c24; }
+
+.action-btn-blue {
+  margin-top: 25px;
+  background-color: #1a3a5f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.action-btn-blue:hover {
+  background-color: white;
+  color: #1a3a5f;
+  border: 1px solid #1a3a5f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(26, 58, 95, 0.3);
+}
+
+.action-btn-blue:active {
+  background-color: #0d1f30;
+  color: white;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(26, 58, 95, 0.3);
+}
